@@ -1,70 +1,25 @@
-# Getting Started with Create React App
+- index.js is the first file that Webpack expects
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- <React.StrictMode> does only one thing i.e. during development it will (render our components twice). Also it checks that if we are using outdated parts of API 
 
-## Available Scripts
+- We write components using functions: Functions need to return some markup i.e. JSX and they should start with capital letters. 
+- Each component can return only one element
+- Inline style: {{}}
+  >> first curly brace: {} => for JS mode
+  >> {{2nd curly brace is for the JS object}}
+  >> {{color:"red", fontSize: "12px"}} [key-value pair]
+- We use className instead of class as 'class' is a reserved keyword in JS
+- Props means passing data between components => we pass from parent component to child component. Props is an object
+- For passing something not a string we use JS objects: {}
+- React renders a component depending on the data and that UI will always be in sync with data. 
+- Data is (Props + State). State is internal data that can be updated by the component's logic.
+- props are objects i.e. reference types. props come from parent component => if we mutate the props, the parent component also gets updated
+- For rendering lists, we use 'MAP' method
+- Note: for everytime we use iteration, a 'key' is required.
 
-In the project directory, you can run:
+ {isOpen && <p>Open</p>} --> if isOpen => false then entire expression is shortcircuited, if isOpen => true, then <p>Open</p> is returned!
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Always have pizzas>0 while doing conditional rendering
+- Note: We cannot use if-else inside JS expressions. i.e. {}
+- <> </> => react fragment
+- What is React Fragment? ​ React Fragment is a feature in React that allows you to return multiple elements from a React component by allowing you to group a list of children without adding extra nodes to the DOM. To return multiple elements from a React component, you'll need to wrap the element in a root element.
